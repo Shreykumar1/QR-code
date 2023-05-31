@@ -1,0 +1,300 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+
+    /*
+    #### Text
+    */
+
+       
+    --dark-blue: hsl(238, 29%, 16%);
+    --soft-red : hsl(14, 88%, 65%);
+
+    /*
+    #### Gradient
+    */
+
+    --soft-violet: hsl(273, 75%, 66%) ;
+    --soft-blue: hsl(240, 73%, 65%) ;
+
+    /*
+    #### Text
+    */
+    --very-dark-grayish-blue: hsl(237, 12%, 33%) ;
+    --dark-grayish-blue: hsl(240, 6%, 50%) ;
+
+
+    --light-grayish-blue: hsl(240, 5%, 91%) ;
+
+    --font-size-1: 12px ;
+
+    --font-weight-regular : 400 ; 
+    --font-weight-semiBold : 700 ; 
+
+}
+
+body {
+    height: 100vh;
+    background-color: white;
+    font-family: 'Kumbh Sans', sans-serif;
+    /* background-image: linear-gradient(-225deg,hsl(273, 75%, 66%),hsl(240, 73%, 65%) ); */
+    background-image: linear-gradient(-225deg,hsl(273, 75%, 66%),hsl(273, 75%, 66%),hsl(240, 73%, 65%),hsl(240, 73%, 65%)  );
+
+
+}
+
+ion-icon{
+ color: var(--soft-red);
+
+}
+
+.attribution { font-size: 11px; text-align: center; }
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/*
+** TOP CONTAINER
+*
+*/
+
+main{
+    padding-inline: 16px;
+
+}
+
+.faq{
+    padding-top: 100px;
+    margin-top: 117px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 5px 10px 18px var(--dark-blue);
+    margin-bottom: 40px;
+}
+
+.text-container{     
+    padding-inline: 10px; 
+    /* border: 1px solid darkblue; */
+    /* box-shadow: 5px 10px 18px #888888: */
+    
+    /* box-shadow: 5px 10px 8px black; */
+    border-radius: 20px;
+}
+
+
+
+
+/*
+*
+** HEADING CONTAINER
+*
+*/
+.faq-heading {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+/*
+*
+** IMAGE CONTAINER
+*
+*/
+
+img { 
+    height: auto;
+    
+}
+
+.img-desktop {
+    display: none;
+}
+.img-mobile {
+    width: 70%;
+    position: absolute;
+    top: 27px;
+    left: 40px;
+}
+
+.bg-mobile{
+    width: 80%;
+    margin: auto;
+    left: 23px;
+    position: relative;
+    top: -100px;
+    z-index: 2;
+    /* position: fixed; */
+}
+
+.image{
+    /* background-image: url(./images/bg-pattern-mobile.svg); */
+    height: 10px;
+}
+
+
+
+/*
+*
+** TEXT CONTENT CONTAINER
+*
+*/
+
+.text-container{
+    padding-bottom: 40px;
+    padding-top: 15px;
+}
+
+.text-content {
+    border-block-end: 1px solid var(--light-grayish-blue);   
+
+}
+
+
+
+
+/*
+** CONTENT CONTAINER
+*
+*/
+
+
+
+
+.heading-container{
+    display: flex;
+    justify-content: space-between;
+    /* border-block-end: 1px solid grey; */
+    padding-bottom: 12px;
+    padding-top: 12px;
+}
+
+.text-heading {
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-semiBold);
+    color: var(--dark-grayish-blue);
+}
+.box{
+    display: none;
+}
+.text-heading:is(:hover,:focus-visible){ 
+    color: var(--soft-red); 
+    cursor: pointer;
+}
+.text-heading:is(:hover,:focus-visible)  {
+    color: var(--soft-red) !important ; 
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/*
+** INSIDE HEADING CONTAINER
+*
+*/
+
+.text-para {
+    display: none;
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-regular);
+    color: var(--dark-grayish-blue);
+    padding-bottom: 17px;
+}
+
+
+.text-para.active {
+    background-color: red;
+    display: block;
+}
+
+
+
+.btn{
+    border: 0;
+    outline: 0;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+@media (min-width  : 426px){
+    .img-mobile{
+        display: none;
+    }
+    .bg-mobile{
+        display: none;
+    }
+    .faq{
+        padding-top: 0;
+        width: 65%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-inline: auto;
+        overflow: hidden;
+    }
+    .img-desktop{
+        /* background-image: url(./images/bg-pattern-desktop.svg); */
+        background-repeat: no-repeat;
+        background-size: 500px;
+        position: relative;
+        display: block;
+        left: -80px;
+        top: 10%;
+    }
+    .container2 {
+        padding-top: 60px;
+        padding-right: 60px;
+        padding-bottom: 55px;
+    }
+    .faq-heading{
+        justify-content: flex-start;
+        padding-bottom: 10px;
+    }
+    .text-heading , 
+    .text-para{
+        font-size: 14.5px;
+        line-height: 1.25;
+    }
+    .text-content{
+        padding-bottom: 8px;
+    }
+    .image{
+        /* overflow: hidden; */
+        background-image: url(./images/bg-pattern-desktop.svg);
+        background-repeat: no-repeat;
+        display: block;
+        height: auto;
+        background-attachment: local;
+        background-position: 115% 70%;      
+    }
+    .box {
+        position: absolute;
+        /* top: 50%; */
+        left: 183px;
+        top: 299px;
+        display: block;
+    }
+    ion-icon {
+        font-size: 22px;
+    }
+    
+}
+@media (min-width  : 1400px)and (max-width : 1495px) {
+    .box{
+        left: 170px;
+    }
+}
+@media (min-width  : 1496px)and (max-width : 1500px) { 
+    .box{
+        left: 186px;
+    }
+}
+
